@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 
+import LogoHeader from './LogoHeader';
 import classes from './MainHeader.module.css';
 
 const MainHeader = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>TEST</div>
+      <LogoHeader />
       <nav>
         <ul>
           <li>
@@ -16,6 +17,22 @@ const MainHeader = () => {
           <li>
             <NavLink activeClassName={classes.active} to='/categories/business'>
               Business
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName={classes.active}
+              to='/categories/technology'
+            >
+              Technology
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName={classes.active}
+              to='/categories/entertainment'
+            >
+              Entertainment
             </NavLink>
           </li>
         </ul>
