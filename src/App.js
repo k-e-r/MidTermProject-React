@@ -17,7 +17,7 @@ function App() {
             <Redirect to='/categories/top' />
           </Route>
           <Route path='/categories/top' component={Top} />
-          <Route path='/categories/top/:lang' component={Top} />
+          <Route path='/categories/top/:country' component={Top} />
           <Route path='/categories/business' component={Business} exact />
           <Route path='/categories/technology' component={Technology} exact />
           <Route

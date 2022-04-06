@@ -5,13 +5,13 @@ import SettingContext from './setting-context';
 const SettingProvider = (props) => {
   const [country, setCountry] = useState('us');
 
-  const changeLangHandler = (lang) => {
-    setCountry(lang);
+  const changeCountryHandler = (country) => {
+    setCountry(country);
   };
 
   const settingContext = {
-    lang: country,
-    setLang: changeLangHandler,
+    country: country,
+    setCountry: changeCountryHandler,
   };
 
   return (

@@ -6,13 +6,11 @@ import SettingContext from '../store/setting-context';
 
 const Top = () => {
   const settingCtx = useContext(SettingContext);
-  const { lang } = settingCtx;
+  const { country } = settingCtx;
   useEffect(() => {
-    console.log('language: ', lang);
-  }, [settingCtx.lang]);
-  const articles = NewsAPI(lang);
-  // const articles = NewsAPI();
-  // const articles = NewsAPI('us', 'business');
+    console.log('country: ', country);
+  }, [country]);
+  const articles = NewsAPI(country);
 
   return (
     <section>

@@ -11,7 +11,7 @@ const LogoHeader = () => {
 
   const countryChange = (e) => {
     setCountry(e.target.value);
-    settingCtx.setLang(e.target.value);
+    settingCtx.setCountry(e.target.value);
   };
 
   return (
