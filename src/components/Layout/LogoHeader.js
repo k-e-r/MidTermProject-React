@@ -4,7 +4,7 @@ import classes from './LogoHeader.module.css';
 import SettingContext from '../../store/setting-context';
 
 const LogoHeader = () => {
-  const [country, setCountry] = useState('');
+  const [country, setCountry] = useState('us');
   console.log('country : ', country);
 
   const settingCtx = useContext(SettingContext);

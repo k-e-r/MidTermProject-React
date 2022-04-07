@@ -22,13 +22,13 @@ const NewsAPI = (country = 'us', category = '') => {
       json: true,
     };
 
-    request(request_params, function (error, response, body) {
-      // console.error('error:', error);
-      console.log('statusCode:', response && response.statusCode);
-      console.log('response:', response.request.path);
-      console.log(body.articles);
-      setArticles(body.articles);
-    });
+    // request(request_params, function (error, response, body) {
+    //   // console.error('error:', error);
+    //   console.log('statusCode:', response && response.statusCode);
+    //   console.log('response:', response.request.path);
+    //   console.log(body.articles);
+    //   setArticles(body.articles);
+    // });
   }, [country, category]);
 
   return articles;
