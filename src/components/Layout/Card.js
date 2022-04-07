@@ -11,7 +11,6 @@ const Card = (props) => {
 
   useEffect(() => {
     setImageState(false);
-    console.log('setImageState FALSE~~');
   }, [props.country]);
 
   // for loading window

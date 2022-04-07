@@ -14,16 +14,25 @@ function App() {
       <main>
         <Switch>
           <Route path='/' exact>
-            <Redirect to='/categories/top' />
+            <Redirect to='/categories/general/:country' />
           </Route>
-          <Route path='/categories/top' component={Top} />
-          <Route path='/categories/top/:country' component={Top} />
+          <Route path='/categories/general' component={Top} />
+          <Route path='/categories/general/:country' component={Top} />
           <Route path='/categories/business' component={Business} exact />
+          <Route path='/categories/business/:country' component={Business} />
           <Route path='/categories/technology' component={Technology} exact />
+          <Route
+            path='/categories/technology/:country'
+            component={Technology}
+          />
           <Route
             path='/categories/entertainment'
             component={Entertainment}
             exact
+          />
+          <Route
+            path='/categories/entertainment/:country'
+            component={Entertainment}
           />
         </Switch>
       </main>

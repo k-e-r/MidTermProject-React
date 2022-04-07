@@ -1,12 +1,12 @@
-import NewsAPI from '../hooks/news-api';
 import Card from '../components/Layout/Card';
+import ArticlesFunc from '../hooks/articles-func';
 
 const Technology = () => {
-  const articles = NewsAPI('us', 'technology');
+  const { articles, country } = ArticlesFunc('technology');
 
   return (
     <section>
-      <Card articles={articles} />
+      <Card articles={articles} country={country} />
     </section>
   );
 };
