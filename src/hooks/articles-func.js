@@ -100,7 +100,7 @@ const ArticlesFunc = (category = 'general') => {
       }
     }
     if (apiArticles !== null) setArticles(apiArticles);
-  }, [putReq, addReq, status, serverArticles, apiArticles]);
+  }, [putReq, addReq, status, serverArticles, apiArticles, location.pathname]);
 
   useEffect(() => {
     if (!attrData.match(/undefined/)) {
