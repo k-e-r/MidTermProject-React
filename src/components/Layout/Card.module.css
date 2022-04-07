@@ -68,5 +68,10 @@
 
   .text {
     width: auto;
+    font-size: 80%;
   }
+
+  /* .text h3 {
+    font-size: 80%;
+  } */
 }

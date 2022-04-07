@@ -1,49 +1,65 @@
 .header {
-  width: min(100%, 80rem);
   height: 5rem;
   margin: auto;
-  padding: 0 10%;
-  border: 0.1rem solid black;
+  border-bottom: 0.2rem solid #ccc;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .header nav {
-  /* height: 100%; */
-  border: 0.1rem solid black;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+
 .header ul {
-  /* height: 100%; */
+  width: min(100%, 80rem);
   list-style: none;
   display: flex;
-  /* padding: 0; */
-  /* margin: 0; */
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .header li {
+  position: relative;
   display: flex;
-  margin: 0 1rem;
   width: 5rem;
   justify-content: center;
-  border: 0.1rem solid black;
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.5rem 0;
 }
 
-/*  */
-
 .header a {
-  color: black;
+  color: rgb(90, 90, 90);
   text-decoration: none;
-  padding-bottom: 0.25rem;
-  border-bottom: 4px solid #95bcf000;
+}
+
+.header a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header a:hover::before,
+.header a:active::before,
+.header a.active::before {
+  background-color: rgba(87, 87, 87, 0.116);
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: #95bcf0;
-  padding-bottom: 0.25rem;
-  border-bottom: 4px solid #95bcf0;
+  color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 690px) {
+  .header ul {
+    font-size: 0.8rem;
+  }
 }
