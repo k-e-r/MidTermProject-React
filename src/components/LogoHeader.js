@@ -1,8 +1,10 @@
 import { useState, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import classes from './LogoHeader.module.css';
 
-import SettingContext from '../../store/setting-context';
-import { ReactComponent as Logo } from '../../assets/bookmark.svg';
+import SettingContext from '../store/setting-context';
+import { ReactComponent as Logo } from '../assets/bookmark.svg';
 
 const LogoHeader = () => {
   const [country, setCountry] = useState('us');
@@ -24,7 +26,13 @@ const LogoHeader = () => {
           </div>
           {/* <p>SEARCH</p> */}
           <div className={classes.subMenu}>
-            <p>LOGIN</p>
+            <NavLink
+              activeClassName={classes.active}
+              to='/login'
+              className={classes.login}
+            >
+              LOGIN
+            </NavLink>
             <select value={country} onChange={countryChange}>
               <option value='us'>USA</option>
               <option value='ca'>Canada</option>

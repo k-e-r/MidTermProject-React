@@ -4,8 +4,9 @@ import Top from './pages/Top';
 import Business from './pages/Business';
 import Technology from './pages/Technology';
 import Entertainment from './pages/Entertainment';
-import MainHeader from './components/Layout/MainHeader';
+import MainHeader from './components/MainHeader';
 import SettingProvider from './store/SettingProvider';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             path='/categories/entertainment/:country'
             component={Entertainment}
           />
+          <Route path='/login' component={Login} />
         </Switch>
       </main>
     </SettingProvider>

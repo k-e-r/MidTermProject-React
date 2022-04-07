@@ -32,12 +32,12 @@
   padding: 0.5rem 0;
 }
 
-.header a {
+.header nav a {
   color: rgb(90, 90, 90);
   text-decoration: none;
 }
 
-.header a::before {
+.header nav a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -46,15 +46,15 @@
   width: 100%;
 }
 
-.header a:hover::before,
-.header a:active::before,
-.header a.active::before {
+.header nav a:hover::before,
+.header nav a:active::before,
+.header nav a.active::before {
   background-color: rgba(87, 87, 87, 0.116);
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
+.header nav a:hover,
+.header nav a:active,
+.header nav a.active {
   color: rgb(255, 255, 255);
 }
 

@@ -99,17 +99,69 @@ export async function getNews(country = 'us', category = 'general') {
 
   console.log(data);
   return data.articles;
+}
 
-  // const transformedArticles = [];
+//
+//
+//
+//
 
-  // for (const key in data) {
-  //   const articleObj = {
-  //     id: key,
-  //     ...data[key],
-  //   };
+export async function getSingleUsr(usrName) {
+  const response = await fetch(`${firebaseDomain}/book/${usrName}.json`);
+  const data = await response.json();
 
-  //   transformedArticles.push(articleObj);
-  // }
+  if (!response.ok) {
+    throw new Error(data.message || 'Could not fetch article.');
+  }
 
-  // return transformedArticles;
+  const transformedArticles = [];
+
+  for (const key in data) {
+    const articleObj = {
+      id: key,
+      ...data[key],
+    };
+
+    transformedArticles.push(articleObj);
+  }
+
+  return transformedArticles;
+}
+
+export async function addUserBook(usrName, bookData) {
+  console.log('usrName:', usrName);
+  const response = await fetch(`${firebaseDomain}/book/${usrName}.json`, {
+    method: 'POST',
+    body: JSON.stringify(bookData),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || 'Could not create article.');
+  }
+
+  return null;
+}
+
+export async function putUserBook(usrName, bookData, usrId) {
+  const response = await fetch(
+    `${firebaseDomain}/book/${usrName}/${usrId}.json`,
+    {
+      method: 'PUT',
+      body: JSON.stringify(bookData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  );
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || 'Could not rewrite article.');
+  }
+
+  return null;
 }

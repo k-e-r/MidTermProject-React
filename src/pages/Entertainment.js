@@ -1,4 +1,4 @@
-import Card from '../components/Layout/Card';
+import Card from '../components/Card';
 import ArticlesFunc from '../hooks/articles-func';
 
 const Entertainment = () => {

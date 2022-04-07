@@ -1,0 +1,64 @@
+.login {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.control {
+  margin: 1rem 0;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.control label,
+.control input {
+  display: block;
+}
+
+.control label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 0.2rem;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+}
+
+.control input:focus {
+  outline: none;
+  border-color: #b6b6b6;
+  background: #ffffff;
+}
+
+.control.invalid input {
+  border-color: red;
+  background: #fbdada;
+}
+
+.actions {
+  text-align: center;
+}
+
+/* .card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+} */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 30rem);
+
+  margin: auto;
+  padding: 0 3rem;
+}
