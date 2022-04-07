@@ -107,7 +107,7 @@ const Top = () => {
 
   return (
     <section>
-      <Card articles={articles} />
+      <Card articles={articles} country={country} />
     </section>
   );
 };

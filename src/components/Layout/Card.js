@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
@@ -8,6 +8,11 @@ import notImage from '../../assets/image-not-found-scaled.jpg';
 
 const Card = (props) => {
   const [imageState, setImageState] = useState(false);
+
+  useEffect(() => {
+    setImageState(false);
+    console.log('setImageState FALSE~~');
+  }, [props.country]);
 
   // for loading window
   let loading = [];
@@ -60,11 +65,9 @@ const Card = (props) => {
                   </div>
                 )}
                 <div className={classes.text}>
-                  <h3>{article.title || <Skeleton />}</h3>
-                  <p className={classes.source}>
-                    {article.source.name || <Skeleton />}
-                  </p>
-                  <p>{article.content || <Skeleton count={3} />}</p>
+                  <h3>{article.title}</h3>
+                  <p className={classes.source}>{article.source.name}</p>
+                  <p>{article.content}</p>
                 </div>
               </a>
             </li>
