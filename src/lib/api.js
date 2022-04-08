@@ -106,7 +106,7 @@ export async function getNews(country = 'us', category = 'general') {
 //
 //
 
-export async function getSingleUsr(usrName) {
+export async function getSingleUser(usrName) {
   const response = await fetch(`${firebaseDomain}/book/${usrName}.json`);
   const data = await response.json();
 

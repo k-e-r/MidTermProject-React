@@ -28,6 +28,13 @@ const LogoHeader = () => {
           <div className={classes.subMenu}>
             <NavLink
               activeClassName={classes.active}
+              to='/mypage'
+              className={classes.login}
+            >
+              MY PAGE
+            </NavLink>
+            <NavLink
+              activeClassName={classes.active}
               to='/login'
               className={classes.login}
             >

@@ -7,6 +7,7 @@ import Entertainment from './pages/Entertainment';
 import MainHeader from './components/MainHeader';
 import SettingProvider from './store/SettingProvider';
 import Login from './pages/Login';
+import Mypage from './pages/Mypage';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             component={Entertainment}
           />
           <Route path='/login' component={Login} />
+          <Route path='/mypage' component={Mypage} />
         </Switch>
       </main>
     </SettingProvider>
